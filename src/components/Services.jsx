@@ -48,7 +48,7 @@ export default function Services() {
               >
                 {it.label}
                 {active === it.key && (
-                  <span className="absolute left-1/2 -bottom-[1px] w-12 transform -translate-x-1/2 h-0.5 bg-rose-600 rounded-full" />
+                  <span className="absolute left-1/2 -bottom-px w-12 transform -translate-x-1/2 h-0.5 bg-rose-600 rounded-full" />
                 )}
               </button>
             ))}

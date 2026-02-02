@@ -40,7 +40,7 @@ export default function HotelWelcome() {
         <p className="mt-6 text-gray-700 leading-relaxed text-lg">Hotel View Villa is nestled on the tranquil hills of Nagarkot, our villa offers the perfect escape for those seeking peace, comfort, and breathtaking Himalayan views. Surrounded by lush greenery and fresh mountain air, the Hotel View Villa combines modern comfort with a touch of traditional Nepali warmth. Experience calm mornings, starry nights, and the true essence of mountain living - all from the comfort of your away from home.</p>
 
         <div className="mt-10">
-          <img src={HotelImage} alt="Hotel Dwarika" className="w-full rounded-2xl shadow-md" />
+          <img src={HotelImage} alt="Hotel Dwarika" className="mx-auto w-full max-w-4xl h-64 sm:h-72 md:h-80 object-cover rounded-2xl shadow-md"/>
         </div>
       </div>
     </section>

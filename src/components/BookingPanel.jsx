@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function BookingPanel() {
   return (
-    <div className="relative z-40 -mt-20 md:-mt-28 mb-20">
+    <div className="relative z-40 -mt-20 md:-mt-28 mb-15">
       <div className="max-width-[1100px] mx-auto w-[95%] bg-white rounded-3xl shadow-xl p-4 flex flex-col md:flex-row items-center gap-4">
         <div className="flex-1 pl-4">
           <h3 className="text-xl font-bold">Book Online</h3>

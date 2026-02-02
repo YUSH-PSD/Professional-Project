@@ -1,6 +1,7 @@
 import hotelBanner from './assets/hotelbanner.jpg'
 import BookingPanel from './components/BookingPanel'
 import HotelWelcome from './components/HotelWelcome'
+import Services from './components/Services'
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
       <BookingPanel />
 
       <HotelWelcome />
+
+      <Services />
 
     </div>
   )

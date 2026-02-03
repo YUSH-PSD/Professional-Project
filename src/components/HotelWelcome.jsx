@@ -29,7 +29,7 @@ export default function HotelWelcome() {
   return (
     <section
       ref={ref}
-      className={`bg-gray-50 py-16 -mt-12 md:-mt-20 relative z-20 transition-transform duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
+      className={`bg-white py-16 -mt-12 md:-mt-20 relative z-20 transition-transform duration-700 ease-out ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
       style={{ willChange: 'opacity, transform' }}
       aria-hidden={!visible}
     >

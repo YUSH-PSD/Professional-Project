@@ -2,6 +2,8 @@ import hotelBanner from './assets/hotelbanner.jpg'
 import BookingPanel from './components/BookingPanel'
 import HotelWelcome from './components/HotelWelcome'
 import Services from './components/Services'
+import BlogsEvents from './components/BlogsEvents' 
+import Footer from './components/Footer' 
 
 function App() {
   return (
@@ -32,6 +34,10 @@ function App() {
       <HotelWelcome />
 
       <Services />
+
+      <BlogsEvents />
+
+      <Footer />
 
     </div>
   )

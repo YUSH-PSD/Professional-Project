@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import spaImage from '../assets/hotelbanner.jpg'
-import welcomeImage from '../assets/welcome.jpg'
+import { Link } from 'react-router-dom'
+import spaImage from '../assets/spa.jpg'
+import welcomeImage from '../assets/fitness.jpg'
+import hotelbanner from '../assets/Swimming.jpeg'
 
 const items = [
   {
@@ -23,9 +25,9 @@ const items = [
     key: 'swimming',
     label: 'Swimming',
     eyebrow: 'SWIMMING',
-    title: 'Rooftop Pool',
-    desc: 'Take a dip in our heated rooftop pool with panoramic views of the Himalayas.',
-    image: spaImage,
+    title: 'Well Managed Pool',
+    desc: 'Take a dip in our heated pool.',
+    image: hotelbanner,
   },
 ]
 
@@ -68,12 +70,12 @@ export default function Services() {
                 <p className="mt-4 text-gray-600 max-w-xl mx-auto md:mx-0">{current.desc}</p>
 
                 <div className="mt-6">
-                  <a href="#" className="inline-flex items-center text-rose-600 font-medium">
+                  <Link to="/amenities" className="inline-flex items-center text-rose-600 font-medium">
                     Learn More
                     <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

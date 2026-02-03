@@ -3,17 +3,13 @@ import HotelImage from '../assets/welcome.jpg'
 
 export default function HotelWelcome() {
   const ref = useRef(null)
-  const [visible, setVisible] = useState(false)
+  const prefersReduced = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  const [visible, setVisible] = useState(prefersReduced)
 
   useEffect(() => {
+    if (prefersReduced) return
     if (!ref.current) return
     const el = ref.current
-    // Respect reduced motion preference
-    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    if (prefersReduced) {
-      setVisible(true)
-      return
-    }
 
     const obs = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -24,7 +20,7 @@ export default function HotelWelcome() {
 
     obs.observe(el)
     return () => obs.disconnect()
-  }, [])
+  }, [prefersReduced])
 
   return (
     <section
@@ -37,7 +33,7 @@ export default function HotelWelcome() {
         <p className="text-orange-400 font-medium">Welcome To</p>
         <h2 className="text-4xl sm:text-5xl font-extrabold mt-2">Hotel Dwarika</h2>
 
-        <p className="mt-6 text-gray-700 leading-relaxed text-lg">Hotel View Villa is nestled on the tranquil hills of Nagarkot, our villa offers the perfect escape for those seeking peace, comfort, and breathtaking Himalayan views. Surrounded by lush greenery and fresh mountain air, the Hotel View Villa combines modern comfort with a touch of traditional Nepali warmth. Experience calm mornings, starry nights, and the true essence of mountain living - all from the comfort of your away from home.</p>
+        <p className="mt-6 text-gray-700 leading-relaxed text-lg">Dwarika's Hotel is a luxury hotel in Kathmandu, Nepal, located in the Battisputali neighborhood. The hotel is a collection of traditional heritage Newari houses centered around courtyards. It has over 80 rooms and 48 suites, and took over 30 years to construct. It has been recognized with the UNESCO Asia-Pacific Heritage Award for Culture Heritage Conservation for its commitment to preserving Nepali architectural traditions. It was awarded the PATA (Pacific Asia Travel Association) Heritage Gold Award in 1980..</p>
 
         <div className="mt-10">
           <img src={HotelImage} alt="Hotel Dwarika" className="mx-auto w-full max-w-4xl h-64 sm:h-72 md:h-80 object-cover rounded-2xl shadow-md"/>

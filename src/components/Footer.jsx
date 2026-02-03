@@ -1,6 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
+  function handleSubscribe(e) {
+    e.preventDefault()
+    alert('Thanks for subscribing — demo only')
+  }
+
   return (
     <footer className="relative mt-12 bg-[#132340] text-white">
       {/* white diamond notch */}
@@ -12,8 +18,8 @@ export default function Footer() {
           <div className="md:w-1/4">
             <div className="text-2xl font-semibold tracking-widest">Hotel <span className="block text-sm tracking-[0.6">Dwarika</span></div>
             <p className="mt-6 text-sm text-gray-200">
-              497 Evergreen Rd. Roseville, CA 95673<br />
-              +44 345 678 903<br />
+              Battisputali Road, Kathmandu 44600, Nepal.<br />
+              (+977-1) 4579488 / 4570770<br />
               hotel_dwarika@gmail.com
             </p>
           </div>
@@ -21,9 +27,9 @@ export default function Footer() {
           {/* Links */}
           <div className="md:w-1/4">
             <ul className="space-y-4 text-sm text-gray-200">
-              <li><a href="#" className="hover:text-white">About Us</a></li>
-              <li><a href="#" className="hover:text-white">Contact</a></li>
-              <li><a href="#" className="hover:text-white">Terms &amp; Conditions</a></li>
+              <li><Link to="/about" className="hover:text-white">About Us</Link></li>
+              <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+              <li><Link to="/terms" className="hover:text-white">Terms &amp; Conditions</Link></li>
             </ul>
           </div>
 
@@ -58,7 +64,7 @@ export default function Footer() {
             <p className="text-sm font-semibold text-gray-200">Subscribe to our membership</p>
             <div className="mt-4 flex">
               <input type="email" placeholder="Email Address" className="flex-1 px-4 py-3 rounded-l border border-[#d1c09a] bg-transparent text-white placeholder:text-gray-300 focus:outline-none" />
-              <button className="px-6 py-3 bg-[#d1c09a] text-[#0f2340] font-semibold rounded-r hover:opacity-95">OK</button>
+              <button onClick={handleSubscribe} className="px-6 py-3 bg-[#d1c09a] text-[#0f2340] font-semibold rounded-r hover:opacity-95">OK</button>
             </div>
           </div>
         </div>

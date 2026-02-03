@@ -1,7 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import img1 from '../assets/welcome.jpg'
-import img2 from '../assets/hotelbanner.jpg'
-import img3 from '../assets/img-2.jpg'
+import img2 from '../assets/room.jpg'
+import img3 from '../assets/image-1.jpg'
+
 
 const posts = [
   { id: 1, title: 'A Day In The Life Of A Dwarika Guest', category: 'Hotels', date: '23 Feb, 2024', image: img1 },
@@ -12,6 +14,30 @@ const posts = [
 ]
 
 export default function BlogsEvents() {
+  const navigate = useNavigate()
+
+  function savePost(p) {
+    const saved = JSON.parse(localStorage.getItem('savedPosts') || '[]')
+    if (!saved.includes(p.id)) {
+      saved.push(p.id)
+      localStorage.setItem('savedPosts', JSON.stringify(saved))
+      alert('Post saved')
+    } else {
+      alert('Already saved')
+    }
+  }
+
+  function sharePost(p) {
+    const url = `${window.location.origin}/blog/${p.id}`
+    if (navigator.share) {
+      navigator.share({ title: p.title, url }).catch(() => {})
+    } else if (navigator.clipboard) {
+      navigator.clipboard.writeText(url).then(() => alert('Link copied to clipboard'))
+    } else {
+      alert('Share not supported. URL: ' + url)
+    }
+  }
+
   return (
     <section className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6 text-center">
@@ -29,8 +55,8 @@ export default function BlogsEvents() {
                 </div>
 
                 <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity flex items-center justify-center gap-3 p-4">
-                  <button aria-label={`Read ${p.title}`} className="bg-white/90 text-gray-900 px-3 py-2 rounded-full text-sm font-medium hover:bg-white">Read</button>
-                  <button aria-label={`Save ${p.title}`} className="bg-white/80 text-gray-900 px-3 py-2 rounded-full text-sm font-medium hover:bg-white">Save</button>
+                  <button onClick={() => navigate(`/blog/${p.id}`)} aria-label={`Read ${p.title}`} className="bg-white/90 text-gray-900 px-3 py-2 rounded-full text-sm font-medium hover:bg-white">Read</button>
+                  <button onClick={() => savePost(p)} aria-label={`Save ${p.title}`} className="bg-white/80 text-gray-900 px-3 py-2 rounded-full text-sm font-medium hover:bg-white">Save</button>
                 </div>
               </div>
               <div className="p-4 text-xs text-gray-500 flex items-center gap-3">
@@ -53,8 +79,8 @@ export default function BlogsEvents() {
 
               <div className="absolute inset-0 bg-gradient-to-from-black/40 to-transparent opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity flex items-end justify-end p-6">
                 <div className="flex gap-3">
-                  <button aria-label={`Read ${posts[3].title}`} className="bg-white/90 text-gray-900 px-4 py-2 rounded-full font-medium hover:bg-white">Read</button>
-                  <button aria-label={`Share ${posts[3].title}`} className="bg-white/80 text-gray-900 px-4 py-2 rounded-full font-medium hover:bg-white">Share</button>
+                  <button onClick={() => navigate(`/blog/${posts[3].id}`)} aria-label={`Read ${posts[3].title}`} className="bg-white/90 text-gray-900 px-4 py-2 rounded-full font-medium hover:bg-white">Read</button>
+                  <button onClick={() => sharePost(posts[3])} aria-label={`Share ${posts[3].title}`} className="bg-white/80 text-gray-900 px-4 py-2 rounded-full font-medium hover:bg-white">Share</button>
                 </div>
               </div>
 
@@ -72,7 +98,7 @@ export default function BlogsEvents() {
 
               <div className="absolute inset-0 bg-gradient-to-from-black/30 to-transparent opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition-opacity flex items-end justify-center p-6">
                 <div className="flex gap-3">
-                  <button aria-label={`Read ${posts[4].title}`} className="bg-white/90 text-gray-900 px-4 py-2 rounded-full font-medium hover:bg-white">Read</button>
+                  <button onClick={() => navigate(`/blog/${posts[4].id}`)} aria-label={`Read ${posts[4].title}`} className="bg-white/90 text-gray-900 px-4 py-2 rounded-full font-medium hover:bg-white">Read</button>
                 </div>
               </div>
 

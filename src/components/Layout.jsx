@@ -3,12 +3,18 @@ import { Link } from 'react-router-dom'
 import Footer from './Footer'
 
 export default function Layout({ children }) {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+  }
+
   return (
     <div className="min-h-screen relative overflow-hidden">
       <header className="fixed top-6 left-1/2 transform -translate-x-1/2 w-[92%] max-width-[1200px] bg-white rounded-full shadow-lg px-6 py-3 z-30 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <div className="text-2xl">🏨</div>
-          <div className="text-sm font-semibold">Hotel Dwarika</div>
+          <Link to="/" onClick={scrollToTop} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <div className="text-2xl">🏨</div>
+            <div className="text-sm font-semibold">Hotel Dwarika</div>
+          </Link>
         </div>
 
         <nav className="hidden md:flex gap-8 text-gray-700">

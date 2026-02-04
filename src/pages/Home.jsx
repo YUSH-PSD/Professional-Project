@@ -1,5 +1,5 @@
 import React from 'react'
-import hotelBanner from '../assets/Hotelfull.jpeg'
+import BannerSlider from '../components/BannerSlider'
 import BookingPanel from '../components/BookingPanel'
 import HotelWelcome from '../components/HotelWelcome'
 import Services from '../components/Services'
@@ -9,9 +9,7 @@ import Footer from '../components/Footer'
 export default function Home() {
   return (
     <div>
-      <main className="hero min-h-screen bg-cover bg-center" style={{ backgroundImage: `url(${hotelBanner})` }}>
-        <div className="absolute inset-0 bg-black/15"></div>
-      </main>
+      <BannerSlider />
 
       <BookingPanel />
 

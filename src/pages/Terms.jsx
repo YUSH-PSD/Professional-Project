@@ -6,7 +6,7 @@ export default function Terms() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="relative h-64 overflow-hidden">
+      <div className="relative h-screen overflow-hidden">
         <div className="absolute inset-0 bg-gradient from-black/70 via-black/50 to-transparent z-10"></div>
         <img 
           src="https://images.unsplash.com/photo-1455587734955-081b22074882?w=1600" 

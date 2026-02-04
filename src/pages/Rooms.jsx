@@ -60,7 +60,7 @@ export default function Rooms() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="relative h-80 md:h-96 overflow-hidden">
+      <div className="relative h-screen overflow-hidden">
         <div className="absolute inset-0 bg-gradient from-black/70 via-black/50 to-transparent z-10"></div>
         <img 
           src={roomImg} 
@@ -74,12 +74,12 @@ export default function Rooms() {
           <p className="text-xl text-gray-200 max-w-2xl">
             Experience unparalleled comfort and luxury in our thoughtfully designed accommodations
           </p>
-          <div className="mt-6 flex items-center space-x-4 text-white">
+          <div className="mt- flex items-center space-x-4 text-white">
             <span className="flex items-center">
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
               </svg>
-              Downtown Location
+              Gaushala
             </span>
             <span className="flex items-center">
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">

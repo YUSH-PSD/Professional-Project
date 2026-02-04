@@ -61,7 +61,7 @@ export default function Rooms() {
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative h-80 md:h-96 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent z-10"></div>
+        <div className="absolute inset-0 bg-gradient from-black/70 via-black/50 to-transparent z-10"></div>
         <img 
           src={roomImg} 
           alt="Rooms & Suites" 
@@ -145,7 +145,7 @@ export default function Rooms() {
                     {room.tagline}
                   </span>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient from-black/70 to-transparent p-4">
                   <div className="flex items-center justify-between text-white">
                     <div className="flex items-center space-x-4">
                       <span className="flex items-center text-sm">

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
+import hotelImage from '../assets/hotel-image.jpg'
 
 export default function NotFound() {
   return (
@@ -9,7 +10,7 @@ export default function NotFound() {
       <div className="relative h-64 overflow-hidden">
         <div className="absolute inset-0 bg-gradient from-black/70 via-black/50 to-transparent z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1519065662770-ab3b7e60f2c2?w=1600" 
+          src={hotelImage}
           alt="404 Page Not Found" 
           className="w-full h-full object-cover"
         />

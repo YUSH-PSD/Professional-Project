@@ -1,6 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
+import hotelImage from '../assets/dinning.jpg'
+import roomImg from '../assets/room.jpg'
+import welcomeImg from '../assets/welcome.jpg'
+import lobbyImg from '../assets/lobby.jpg'
+import fitnessImg from '../assets/fitness.jpg'
 
 const restaurants = [
   {
@@ -8,7 +13,7 @@ const restaurants = [
     name: 'The Ganj',
     cuisine: 'Fine Dining • Nepali & International',
     description: 'Our flagship restaurant offering an exquisite blend of traditional Nepali cuisine and international favorites, prepared by our award-winning chefs.',
-    image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800',
+    image: roomImg,
     hours: '6:30 AM - 10:30 PM',
     dressCode: 'Smart Casual'
   },
@@ -17,7 +22,7 @@ const restaurants = [
     name: 'Terrace Restaurant',
     cuisine: 'All-Day Dining • Multi-Cuisine',
     description: 'A vibrant all-day dining venue with live cooking stations, featuring a diverse menu of Asian, Western, and Nepali dishes.',
-    image: 'https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800',
+    image: welcomeImg,
     hours: '6:00 AM - 11:00 PM',
     dressCode: 'Casual'
   },
@@ -26,7 +31,7 @@ const restaurants = [
     name: 'Dragon House',
     cuisine: 'Specialty • Chinese',
     description: 'Experience authentic Chinese cuisine in an elegant setting, with signature dishes from various regions of China.',
-    image: 'https://images.unsplash.com/photo-1581349485608-9469926a8e5e?w=800',
+    image: lobbyImg,
     hours: '12:00 PM - 3:00 PM, 6:00 PM - 10:30 PM',
     dressCode: 'Smart Casual'
   },
@@ -35,7 +40,7 @@ const restaurants = [
     name: 'Mithai Shop',
     cuisine: 'Bakery & Confectionery',
     description: 'Satisfy your sweet tooth with our freshly baked pastries, cakes, and traditional Nepali sweets.',
-    image: 'https://images.unsplash.com/photo-1559620192-032c4bc4674e?w=800',
+    image: fitnessImg,
     hours: '7:00 AM - 9:00 PM',
     dressCode: 'Casual'
   }
@@ -47,7 +52,7 @@ const bars = [
     name: 'Club 1933',
     type: 'Rooftop Bar',
     description: 'The city\'s premier rooftop lounge offering stunning views, handcrafted cocktails, and a sophisticated ambiance.',
-    image: 'https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=800',
+    image: roomImg,
     hours: '4:00 PM - 1:00 AM'
   },
   {
@@ -55,7 +60,7 @@ const bars = [
     name: 'The Lounge',
     type: 'Lobby Bar',
     description: 'A cozy lobby bar perfect for casual meetings or enjoying afternoon tea and light snacks.',
-    image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800',
+    image: lobbyImg,
     hours: '10:00 AM - 11:00 PM'
   }
 ]
@@ -67,7 +72,7 @@ export default function Dining() {
       <div className="relative h-screen overflow-hidden">
         <div className="absolute inset from-black/70 via-black/50 to-transparent z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600" 
+          src={hotelImage}
           alt="Dining" 
           className="w-full h-full object-cover"
         />

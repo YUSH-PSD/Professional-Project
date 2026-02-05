@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import Footer from '../components/Footer'
+import hotelImage from '../assets/hotel-image.jpg'
+import roomImg from '../assets/room.jpg'
+import welcomeImg from '../assets/welcome.jpg'
 
 const roomTypes = [
-  { id: 1, name: 'Deluxe Room', price: 120, image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800' },
-  { id: 2, name: 'Executive Suite', price: 220, image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800' },
-  { id: 3, name: 'Presidential Suite', price: 520, image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800' }
+  { id: 1, name: 'Deluxe Room', price: 120, image: roomImg },
+  { id: 2, name: 'Executive Suite', price: 220, image: welcomeImg },
+  { id: 3, name: 'Presidential Suite', price: 520, image: roomImg }
 ]
 
 export default function Booking() {
@@ -48,7 +51,7 @@ export default function Booking() {
       <div className="relative h-screen overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-red from-black/70 via-black/50 to-transparent z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1600" 
+          src={hotelImage}
           alt="Book Your Stay" 
           className="w-full h-full object-cover"
         />

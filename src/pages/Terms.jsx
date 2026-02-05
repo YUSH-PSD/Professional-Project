@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
+import hotelImage from '../assets/hotel-image.jpg'
 
 export default function Terms() {
   return (
@@ -9,7 +10,7 @@ export default function Terms() {
       <div className="relative h-screen overflow-hidden">
         <div className="absolute inset-0 bg-gradient from-black/70 via-black/50 to-transparent z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1455587734955-081b22074882?w=1600" 
+          src={hotelImage}
           alt="Terms & Conditions" 
           className="w-full h-full object-cover"
         />

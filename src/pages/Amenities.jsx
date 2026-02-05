@@ -4,6 +4,8 @@ import Footer from '../components/Footer'
 import fitnessImg from '../assets/fitness.jpg'
 import spaImg from '../assets/spa.jpg'
 import swimmingImg from '../assets/Swimming.jpeg'
+import lobbyImg from '../assets/lobby.jpg'
+import welcomeImg from '../assets/welcome.jpg'
 
 const amenities = [
   {
@@ -31,21 +33,21 @@ const amenities = [
     id: 4,
     name: 'Business Center',
     description: 'Complete your work efficiently with our fully equipped business center and meeting facilities.',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800',
+    image: lobbyImg,
     features: ['Private Offices', 'Meeting Rooms', 'High-Speed WiFi', 'Printing Services', 'Secretarial Support']
   },
   {
     id: 5,
     name: 'Concierge Services',
     description: 'Our dedicated concierge team is here to make your stay seamless and memorable.',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=800',
+    image: welcomeImg,
     features: ['Airport Transfers', 'Tour Desk', 'Restaurant Reservations', 'Car Rental', 'Event Tickets']
   },
   {
     id: 6,
     name: 'Kids Club',
     description: 'Keep the little ones entertained with our supervised kids club activities and facilities.',
-    image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800',
+    image: fitnessImg,
     features: ['Games Room', 'Arts & Crafts', 'Outdoor Play', 'Story Time', 'Snack Bar']
   }
 ]
@@ -71,7 +73,7 @@ export default function Amenities() {
       <div className="max-w-6xl mx-auto px-6 py-16">
         {/* Introduction */}
         <div className="text-center mb-16">
-          <span className="text-orange-500 font-semibold uppercase tracking-wider text-sm">Facilities</span>
+          <span className="text-orange-400 font-semibold uppercase tracking-wider text-sm">Facilities</span>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Premium Amenities</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             At Hotel Dwarika, we offer an array of world-class amenities to make your stay truly exceptional. 
@@ -95,7 +97,7 @@ export default function Amenities() {
                 <p className="text-gray-600 mb-4">{amenity.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {amenity.features.map((feature, idx) => (
-                    <span key={idx} className="px-3 py-1 bg-orange-100 text-orange-700 rounded-full text-sm">
+                    <span key={idx} className="px-3 py-1 bg-orange-100 text-orange-600 rounded-full text-sm">
                       {feature}
                     </span>
                   ))}
@@ -132,17 +134,17 @@ export default function Amenities() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 text-center">
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Spa & Wellness</h3>
             <p className="text-gray-600 mb-2">Open Daily</p>
-            <p className="text-orange-500 font-medium">10:00 AM - 9:00 PM</p>
+            <p className="text-orange-400 font-medium">10:00 AM - 9:00 PM</p>
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 text-center">
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Fitness Center</h3>
             <p className="text-gray-600 mb-2">24/7 Access</p>
-            <p className="text-orange-500 font-medium">Always Open</p>
+            <p className="text-orange-400 font-medium">Always Open</p>
           </div>
           <div className="bg-white border border-gray-200 rounded-xl p-6 text-center">
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Swimming Pool</h3>
             <p className="text-gray-600 mb-2">Open Daily</p>
-            <p className="text-orange-500 font-medium">6:00 AM - 10:00 PM</p>
+            <p className="text-orange-400 font-medium">6:00 AM - 10:00 PM</p>
           </div>
         </div>
 
@@ -152,7 +154,7 @@ export default function Amenities() {
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Book your stay now and enjoy all our premium amenities during your visit.
           </p>
-          <Link to="/booking" className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+          <Link to="/booking" className="inline-block bg-orange-400 hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
             Book Your Stay
           </Link>
         </div>

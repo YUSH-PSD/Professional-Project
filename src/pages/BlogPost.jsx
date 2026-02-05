@@ -1,12 +1,17 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import Footer from '../components/Footer'
+import hotelImage from '../assets/hotel-image.jpg'
+import roomImg from '../assets/room.jpg'
+import welcomeImg from '../assets/welcome.jpg'
+import spaImg from '../assets/spa.jpg'
+import fitnessImg from '../assets/fitness.jpg'
 
 const posts = [
   {
     id: '1',
     title: 'A Day In The Life Of A Dwarika Guest',
-    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800',
+    image: hotelImage,
     date: 'January 15, 2024',
     author: 'Sarah Johnson',
     category: 'Experience',
@@ -29,7 +34,7 @@ At Hotel Dwarika, every moment is designed to create memories that last a lifeti
   {
     id: '2',
     title: 'Guide To Seasonal Activities In The City',
-    image: 'https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?w=800',
+    image: fitnessImg,
     date: 'January 10, 2024',
     author: 'Michael Chen',
     category: 'Travel Guide',
@@ -58,7 +63,7 @@ No matter when you visit, Hotel Dwarika ensures your stay is comfortable and mem
   {
     id: '3',
     title: 'A Look Inside Hotel Dwarika\'s Suites',
-    image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?w=800',
+    image: roomImg,
     date: 'January 5, 2024',
     author: 'Emily Watson',
     category: 'Accommodation',
@@ -100,7 +105,7 @@ Experience the difference at Hotel Dwarika.`
   {
     id: '4',
     title: 'Discovering Local Culture And Heritage',
-    image: 'https://images.unsplash.com/photo-1553611016-33850d5c4c2e?w=800',
+    image: welcomeImg,
     date: 'December 28, 2023',
     author: 'Rajendra Dhar',
     category: 'Culture',
@@ -140,7 +145,7 @@ Let Hotel Dwarika be your gateway to discovering the rich cultural tapestry of N
   {
     id: '5',
     title: 'Wellness And Rejuvenation At Our Spa',
-    image: 'https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=800',
+    image: spaImg,
     date: 'December 20, 2023',
     author: 'Priya Sharma',
     category: 'Wellness',

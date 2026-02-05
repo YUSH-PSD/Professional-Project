@@ -24,39 +24,29 @@ export default function Footer() {
             </p>
           </div>
 
+          {/* Map */}
+          <div className="md:w-1/4">
+            <h4 className="text-sm font-semibold text-gray-200 mb-4">Our Location</h4>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.4177727655847!2d85.3173!3d27.7172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19d4d76e8e77%3A0x9d5d4c3b5c5c5c5c!2sBattisputali%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1699999999999!5m2!1sen!2snp"
+              width="100%"
+              height="150"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Hotel Location"
+              className="rounded"
+            />
+          </div>
+
           {/* Links */}
           <div className="md:w-1/4">
             <ul className="space-y-4 text-sm text-gray-200">
               <li><Link to="/about" className="hover:text-white">About Us</Link></li>
               <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
-              <li><Link to="/terms" className="hover:text-white">Terms &amp; Conditions</Link></li>
+              <li><Link to="/terms" className="hover:text-white">Terms & Conditions</Link></li>
             </ul>
-          </div>
-
-          {/* Socials */}
-          <div className="md:w-1/4">
-            <div className="flex flex-col gap-4 text-gray-200">
-              <a href="#" className="flex items-center gap-3 hover:text-white">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                  <path d="M22 12C22 6.48 17.52 2 12 2S2 6.48 2 12c0 5 3.66 9.12 8.44 9.88v-6.99H7.9v-2.89h2.54V9.83c0-2.5 1.5-3.89 3.8-3.89 1.1 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.89h-2.34V22C18.34 21.12 22 17 22 12z" fill="currentColor" />
-                </svg>
-                <span className="text-sm">Facebook</span>
-              </a>
-
-              <a href="#" className="flex items-center gap-3 hover:text-white">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                  <path d="M22 5.92c-.77.34-1.6.57-2.47.68a4.26 4.26 0 0 0 1.86-2.36 8.49 8.49 0 0 1-2.7 1.03 4.24 4.24 0 0 0-7.22 3.86A12.03 12.03 0 0 1 3.15 4.8a4.24 4.24 0 0 0 1.32 5.65 4.21 4.21 0 0 1-1.92-.53v.05a4.24 4.24 0 0 0 3.4 4.16c-.47.13-.97.2-1.48.2-.36 0-.71-.03-1.05-.1a4.25 4.25 0 0 0 3.96 2.95A8.5 8.5 0 0 1 2 19.54 12.03 12.03 0 0 0 8.29 22c7.55 0 11.68-6.25 11.68-11.67 0-.18 0-.36-.01-.54.8-.58 1.49-1.3 2.04-2.12-.73.32-1.52.54-2.34.63z" fill="currentColor" />
-                </svg>
-                <span className="text-sm">Twitter</span>
-              </a>
-
-              <a href="#" className="flex items-center gap-3 hover:text-white">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-                  <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.2A3.8 3.8 0 1 0 15.8 12 3.8 3.8 0 0 0 12 8.2zM18.5 6.2a1.1 1.1 0 1 1-1.1-1.1 1.1 1.1 0 0 1 1.1 1.1z" fill="currentColor" />
-                </svg>
-                <span className="text-sm">Instagram</span>
-              </a>
-            </div>
           </div>
 
           {/* Newsletter */}

@@ -3,7 +3,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import hotelBanner from '../assets/Hotelfull.jpeg'
-import hotelView from '../assets/welcome.jpg'
+import hotelView from '../assets/Dwarikas-97.jpg'
 import roomImg from '../assets/room.jpg'
 
 const banners = [

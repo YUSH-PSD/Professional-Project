@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 import hotelView from '../assets/image-4.jpg'
-import welcomeImg from '../assets/hotel-image.jpg'
+import welcomeImg from '../assets/dwarikas-97.jpg'
 
 export default function About() {
   return (

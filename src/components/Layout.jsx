@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from './Footer'
 
 export default function Layout({ children }) {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  
   const scrollToTop = () => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+    setMobileMenuOpen(false)
+  }
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen)
   }
 
   return (
@@ -13,20 +20,52 @@ export default function Layout({ children }) {
         <div className="flex items-center gap-3">
           <Link to="/" onClick={scrollToTop} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             <div className="text-2xl">🏨</div>
-            <div className="text-sm font-semibold">Hotel Dwarika</div>
+            <div className="text-2xl logo-font">Hotel Dwarika</div>
           </Link>
         </div>
 
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex gap-8 text-gray-700">
-          <Link to="/about" className="hover:text-orange-500">About</Link>
-          <Link to="/rooms" className="hover:text-orange-500">Rooms &amp; Suites</Link>
-          <Link to="/amenities" className="hover:text-orange-500">Amenities</Link>
-          <Link to="/dining" className="hover:text-orange-500">Dining</Link>
-          <Link to="/contact" className="hover:text-orange-500">Contact Us</Link>
+          <Link to="/about" onClick={scrollToTop} className="hover:text-orange-500">About</Link>
+          <Link to="/rooms" onClick={scrollToTop} className="hover:text-orange-500">Rooms & Suites</Link>
+          <Link to="/amenities" onClick={scrollToTop} className="hover:text-orange-500">Amenities</Link>
+          <Link to="/dining" onClick={scrollToTop} className="hover:text-orange-500">Dining</Link>
+          <Link to="/contact" onClick={scrollToTop} className="hover:text-orange-500">Contact Us</Link>
         </nav>
 
-        <Link to="/booking" className="ml-4 bg-orange-400 hover:bg-orange-500 text-white rounded-full px-4 py-2 font-semibold">Book Now</Link>
+        <div className="flex items-center gap-4">
+          <Link to="/booking" onClick={scrollToTop} className="hidden md:block ml-4 bg-orange-400 hover:bg-orange-500 text-white rounded-full px-4 py-2 font-semibold">Book Now</Link>
+          
+          {/* Mobile Hamburger Button */}
+          <button 
+            className="md:hidden flex flex-col justify-center items-center gap-1.5 p-2"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu"
+          >
+            <span className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
+            <span className={`block w-6 h-0.5 bg-gray-700 transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+          </button>
+        </div>
       </header>
+
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-20 md:hidden" onClick={() => setMobileMenuOpen(false)}></div>
+      )}
+
+      {/* Mobile Navigation Menu */}
+      <div className={`fixed top-24 left-1/2 transform -translate-x-1/2 w-[90%] bg-white rounded-2xl shadow-xl z-25 md:hidden transition-all duration-300 ${mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'}`}>
+        <nav className="flex flex-col py-4">
+          <Link to="/about" onClick={scrollToTop} className="px-6 py-3 hover:bg-orange-50 hover:text-orange-500 transition-colors">About</Link>
+          <Link to="/rooms" onClick={scrollToTop} className="px-6 py-3 hover:bg-orange-50 hover:text-orange-500 transition-colors">Rooms & Suites</Link>
+          <Link to="/amenities" onClick={scrollToTop} className="px-6 py-3 hover:bg-orange-50 hover:text-orange-500 transition-colors">Amenities</Link>
+          <Link to="/dining" onClick={scrollToTop} className="px-6 py-3 hover:bg-orange-50 hover:text-orange-500 transition-colors">Dining</Link>
+          <Link to="/contact" onClick={scrollToTop} className="px-6 py-3 hover:bg-orange-50 hover:text-orange-500 transition-colors">Contact Us</Link>
+          <hr className="my-2" />
+          <Link to="/booking" onClick={scrollToTop} className="mx-6 my-2 bg-orange-400 hover:bg-orange-500 text-white rounded-full px-4 py-3 font-semibold text-center">Book Now</Link>
+        </nav>
+      </div>
 
       <main className="pt-28">{children}</main>
 

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import img1 from '../assets/welcome.jpg'
 import img2 from '../assets/room.jpg'
 import img3 from '../assets/image-1.jpg'
+import img4 from '../assets/img-3965.jpg'
 
 
 const posts = [
@@ -10,7 +11,7 @@ const posts = [
   { id: 2, title: 'Guide To Seasonal Activities In The City', category: 'Activities', date: '23 Feb, 2024', image: img2 },
   { id: 3, title: 'A Look Inside Hotel Dwarika\'s Suites', category: 'Rooms', date: '23 Feb, 2024', image: img3 },
   { id: 4, title: "Why Hotel Dwarika Is The Perfect Staycation Destination", category: 'Hotels', date: '23 Feb, 2024', image: img2 },
-  { id: 5, title: 'The Benefits Of Booking Directly With Hotel Dwarika', category: 'Hotels', date: '23 Feb, 2024', image: img1 },
+  { id: 5, title: 'The Benefits Of Booking Directly With Hotel Dwarika', category: 'Hotels', date: '23 Feb, 2024', image: img4 },
 ]
 
 export default function BlogsEvents() {

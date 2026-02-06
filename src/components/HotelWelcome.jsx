@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import HotelImage from '../assets/welcome.jpg'
+import HotelImage from '../assets/img-4531.jpg'
 
 export default function HotelWelcome() {
   const ref = useRef(null)
